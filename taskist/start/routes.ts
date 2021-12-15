@@ -20,14 +20,7 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.get('/', async ({ view }) => {
-  return view.render('welcome')
-})
+Route.get('/', 'PagesController.home')
 
-Route.get('/about/:name?', async ({ params }) => {
-  return params.name ? `this is ${params.name} about page` : "This is nothing"
-})
-
-Route.get('/contact', async () => {
-  return 'this is the contact page'
-})
+Route.get('/about/:name?', 'PagesController.about')
+Route.get('/contact', 'PagesController.contact')
