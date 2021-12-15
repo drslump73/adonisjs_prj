@@ -1,0 +1,12 @@
+
+tasks:
+  - init: |
+      echo 'TODO: build project'
+    command: |
+      echo 'TODO: start app'
+vscode:
+  extensions:
+    - eamodio.gitlens
+    - oderwat.indent-rainbow
+    - zhuangtongfa.material-theme
+    - vscode-icons-team.vscode-icons
