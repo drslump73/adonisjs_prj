@@ -2,14 +2,16 @@ import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 
 export default class PagesController {
     public home({ view }: HttpContextContract) {
-        return view.render('welcome')
+        return view.render('tasks/index')
     }
     
-    public about({ params }: HttpContextContract) {
-        return params.name ? `This is ${params.name} about` : 'This is nothing'
+    public about({ view, params }: HttpContextContract) {
+        const name = params.name
+
+        return view.render('about', { name })
     }
     
-    public contact() {
-        return 'This is contract page'
+    public contact({ view }) {
+        return view.render('contact')
     }
 }

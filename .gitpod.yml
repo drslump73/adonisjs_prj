@@ -1,9 +1,5 @@
-
-tasks:
-  - init: |
-      echo 'TODO: build project'
-    command: |
-      echo 'TODO: start app'
+image:
+  file: .gitpod.dockerfile
 vscode:
   extensions:
     - eamodio.gitlens
